@@ -14,7 +14,7 @@ This README provides instructions for building and running the Ollama qwq:32b mo
 
 2. Build the Docker image:
    ```
-   docker build -t ollama-qwq-32b-preview
+   docker build -t ollama-qwq-32b-preview .
    ```
 
 3. Run the container:
@@ -31,14 +31,14 @@ This README provides instructions for building and running the Ollama qwq:32b mo
 To run on the local development network:
 
 ```
-go run . run --network dev github.com/rhochmayr/ollama-qwq-32b-preview:1.0.0 --web3-private-key <admin_key> -i Prompt="your prompt here"
+go run . run --network dev github.com/rhochmayr/ollama-qwq-32b-preview:1.0.0 --web3-private-key <private-key> -i Prompt="your prompt here"
 ```
 
 Replace `<admin_key>` with the admin key found in `hardhat/utils/accounts.ts`.
 
 Example:
 ```
-go run . run --network dev github.com/rhochmayr/ollama-qwq-32b-preview:1.0.0 --web3-private-key <admin_key> -i Prompt="Please add a pair of parentheses to the incorrect equation: 1 + 2 * 3 + 4 * 5 + 6 * 7 + 8 * 9 = 479, to make the equation true."
+go run . run --network dev github.com/rhochmayr/ollama-qwq-32b-preview:1.0.0 --web3-private-key <private-key> -i Prompt="Please add a pair of parentheses to the incorrect equation: 1 + 2 * 3 + 4 * 5 + 6 * 7 + 8 * 9 = 479, to make the equation true."
 ```
 
 ### Using Lilypad Main Network
